@@ -1,0 +1,1219 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, button, input, select {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Arial', sans-serif;
+}
+
+/* Default light mode styling */
+body {
+background-color: #f9f9f9;
+color: #333;
+font-family: Arial, sans-serif;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+background-color: #f9f9f9;
+color: #333;
+}
+
+body.dark-mode {
+background-color: #333;
+color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+background: gold;  /* Gold color for light mode */
+color: red;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.navbar .logo {
+font-size: 1.6rem;
+font-weight: bold;
+}
+
+.navbar nav ul {
+list-style: none;
+display: flex;
+gap: 15px;
+}
+
+.navbar nav ul li a {
+text-decoration: none;
+color: red;
+font-weight: bold;
+font-size: 1.5rem;
+padding: 5px 10px;
+transition: all 0.3s;
+}
+
+.navbar nav ul li a:hover {
+background: yellow;
+border-radius: 10px;
+}
+
+.theme-toggle {
+background: none;
+border: none;
+font-size: 1.5rem;
+cursor: pointer;
+}
+
+/* CSS for the logo image */
+.navbar .logo img {
+height: 70px; /* Adjust height as needed */
+width: auto;  /* Maintain aspect ratio */
+margin-right: 20px; /* Space between logo and navbar items */
+}
+
+/* General Reset for sections */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Video Popup Section */
+.video-carousel {
+position: relative;
+height: 100vh; /* Ensure the video takes up the full viewport height */
+overflow: hidden;
+}
+
+.video-carousel .video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.video-gradient {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.6); /* Darker gradient for better contrast */
+z-index: 5;
+}
+
+.video-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: #f49f9f; /* White text for better contrast */
+z-index: 10;
+}
+
+.video-overlay h1 {
+font-size: 3rem; /* Larger font size for prominence */
+font-weight: bold;
+text-transform: uppercase; /* Make it stand out */
+letter-spacing: 2px; /* Adds spacing for more readability */
+margin-bottom: 20px;
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for depth */
+}
+
+.video-overlay p {
+font-size: 1.5rem;
+margin-bottom: 30px;
+max-width: 80%; /* Limit width for better text alignment */
+margin-left: auto;
+margin-right: auto;
+line-height: 1.6; /* Better line spacing */
+}
+
+.cta-button {
+padding: 12px 24px;
+background-color: #f35353; /* Button color */
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+font-size: 1.2rem;
+transition: background-color 0.3s, transform 0.3s; /* Added transform for button animation */
+}
+
+.cta-button:hover {
+background-color: #d43f3f;
+transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Enhance Video Carousel Effects */
+.video-carousel .video {
+transition: transform 0.3s ease;
+}
+
+.video-carousel:hover .video {
+transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Add animation to the overlay text */
+@keyframes fadeInText {
+0% { opacity: 0; transform: translateY(-20px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+
+.video-overlay h1,
+.video-overlay p {
+animation: fadeInText 1s ease-out forwards;
+}
+
+.video-overlay a.cta-button {
+animation: fadeInText 1.5s ease-out forwards;
+}
+/* Parallax Effect for Video */
+.video-carousel {
+position: relative;
+height: 100vh;
+overflow: hidden;
+background: url('./your-parallax-image.jpg') no-repeat center center fixed;
+background-size: cover;
+}
+
+.video-carousel .video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.video-carousel:hover .video {
+transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Enhanced Button Styles */
+.cta-button {
+padding: 15px 30px;
+background-color: #f35353;
+color: #fff;
+text-decoration: none;
+border-radius: 50px;
+font-weight: bold;
+font-size: 1.2rem;
+transition: all 0.3s ease;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+background-color: #e44d4d;
+transform: scale(1.1);
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Button shadow on hover */
+color: #fff;
+}
+
+/* Adding Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+
+body {
+font-family: 'Roboto', sans-serif;
+}
+
+.video-overlay h1 {
+font-family: 'Poppins', sans-serif;
+font-size: 3.5rem;
+font-weight: bold;
+text-transform: uppercase;
+margin-bottom: 20px;
+text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Enhanced shadow for better readability */
+}
+
+/* Floating Effect for Text */
+@keyframes float {
+0% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-10px);
+}
+100% {
+    transform: translateY(0);
+}
+}
+
+.video-overlay h1, .video-overlay p {
+animation: float 3s ease-in-out infinite;
+}
+
+/* Add Particle Effect (Example) */
+.particles {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: transparent;
+pointer-events: none;
+z-index: 1;
+}
+
+.particle {
+position: absolute;
+width: 5px;
+height: 5px;
+background: rgba(255, 255, 255, 0.8);
+border-radius: 50%;
+animation: moveParticles 3s infinite ease-in-out;
+}
+
+@keyframes moveParticles {
+0% {
+    transform: translate3d(0, 0, 0);
+}
+50% {
+    transform: translate3d(-200px, 150px, 0);
+}
+100% {
+    transform: translate3d(200px, -150px, 0);
+}
+}
+
+/* Styling for the Navigation Menu */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+background: rgba(255, 255, 255, 0.9);  /* Slightly transparent background */
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+position: sticky;
+top: 0;
+z-index: 1000;
+backdrop-filter: blur(10px); /* Background blur effect */
+}
+
+.navbar nav ul li a {
+color: #333;
+font-size: 1.4rem;
+transition: all 0.3s ease-in-out;
+}
+
+.navbar nav ul li a:hover {
+color: #f35353; /* Hover color change */
+background-color: rgba(255, 255, 255, 0.6);
+border-radius: 5px;
+}
+
+/* Add subtle hover effect to the theme-toggle button */
+.theme-toggle:hover {
+transform: rotate(20deg); /* Slight rotation on hover */
+color: #f35353; /* Color change on hover */
+}
+/* Smooth Gradient Background Animation */
+body {
+background: linear-gradient(135deg, #ff7e5f, #feb47b);
+background-size: 400% 400%;
+animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+/* Hover Effect for Destination Cards */
+.destination {
+position: relative;
+overflow: hidden;
+border-radius: 8px;
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.destination:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.destination img {
+width: 100%;
+height: auto;
+transition: transform 0.4s ease;
+}
+
+.destination:hover img {
+transform: scale(1.1);
+}
+
+.overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+font-size: 2rem;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.destination:hover .overlay {
+opacity: 1;
+}
+
+/* ScrollReveal for Animating Sections */
+.explore-section, #destinations, #cta {
+opacity: 0;
+transform: translateY(50px);
+transition: opacity 1s, transform 1s;
+}
+
+.explore-section.visible, #destinations.visible, #cta.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Hover Effects on Navbar Links */
+.navbar nav ul li a {
+position: relative;
+padding-bottom: 5px;
+font-size: 1.5rem;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.navbar nav ul li a::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 2px;
+background-color: #f35353;
+transition: width 0.3s ease;
+}
+
+.navbar nav ul li a:hover::after {
+width: 100%;
+}
+
+.navbar nav ul li a:hover {
+color: #f35353;
+}
+
+/* Floating Effect for Images and Text */
+.explore-section img, .explore-section h2 {
+animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+0% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-10px);
+}
+100% {
+    transform: translateY(0);
+}
+}
+
+/* Parallax Scrolling */
+.parallax {
+position: relative;
+background: url('./parallax-background.jpg') no-repeat center center fixed;
+background-size: cover;
+height: 100vh;
+overflow: hidden;
+z-index: -1;
+}
+
+
+/* Explore Section */
+.explore-section {
+padding: 50px 20px;
+background-color: #f5f5f5;
+}
+
+/* Destinations Section */
+#destinations {
+padding: 50px 20px;
+text-align: center;
+background: #fffcfc;
+color: #0f062a;
+margin-top: 0;
+margin-bottom: 50px;
+}
+
+#destinations h2 {
+font-size: 2rem;
+margin-bottom: 30px;
+font-weight: bold;
+text-transform: uppercase; /* Optional: uppercase title for added style */
+}
+
+.destinations-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+padding: 0 10px;
+}
+
+.destination {
+position: relative;
+overflow: hidden;
+border-radius: 10px;
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around destinations */
+}
+
+.destination:hover {
+transform: scale(1.05);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+.destination img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+
+.destination:hover img {
+transform: scale(1.1); /* Slight zoom on hover for images */
+}
+
+.destination .overlay {
+position: absolute;
+bottom: 0;
+width: 100%;
+background: rgba(0, 0, 0, 0.6);
+color: #fff;
+text-align: center;
+padding: 10px;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.destination:hover .overlay {
+opacity: 1; /* Fade in overlay on hover */
+}
+
+.overlay h3 {
+margin: 0;
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+#destinations {
+    padding: 40px 15px;
+}
+
+.destinations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#destinations h2 {
+    font-size: 1.8rem;
+}
+
+.overlay h3 {
+    font-size: 1.2rem;
+}
+}
+
+/* Travel Stories Section */
+#blog {
+padding: 50px 20px;
+background: #f8f9fa;  /* Lighter background for contrast */
+text-align: center;
+position: relative;
+overflow: hidden;  /* Prevent overflow from any animated effects */
+}
+
+#blog::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: url('./images/abstract-background.svg'); /* Optional: Add a light background pattern */
+background-size: cover;
+opacity: 0.1;  /* Semi-transparent background pattern */
+z-index: -1;
+}
+
+#blog h2 {
+font-size: 2.5rem;
+margin-bottom: 30px;
+font-weight: bold;
+color: #333;
+text-transform: uppercase;
+letter-spacing: 1px;
+animation: fadeInUp 1s ease-in-out;  /* Animation on header */
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+/* Grid Layout for Stories */
+.stories-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+margin-top: 30px;
+}
+
+/* Individual Story */
+.story {
+background: #fff;
+padding: 20px;
+border-radius: 15px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+}
+
+.story:hover {
+transform: translateY(-12px); /* Slight lift on hover */
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
+
+.story img {
+width: 100%;
+height: 250px;  /* Set a fixed height for uniformity */
+object-fit: cover;
+border-radius: 15px;
+margin-bottom: 15px;
+transition: transform 0.3s ease, filter 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Hover Effect for Images */
+.story:hover img {
+transform: scale(1.1); /* Zoom effect on hover */
+filter: brightness(80%); /* Darken the image on hover */
+}
+
+/* Text Styling */
+.story p {
+font-size: 1rem;
+color: #555;
+line-height: 1.6;
+font-style: italic;
+transition: color 0.3s ease;
+}
+
+/* Hover Text Effects */
+.story:hover p {
+color: #007bff;  /* Change text color on hover */
+}
+
+/* Add Gradient Overlay for Story */
+.story::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.3);  /* Dark gradient overlay */
+border-radius: 15px;
+z-index: 1;
+}
+
+.story p {
+position: relative;
+z-index: 2;
+}
+
+/* Parallax Scrolling Effect for Background */
+#blog {
+background-attachment: fixed;  /* Parallax effect */
+}
+
+/* Add Tilt Effect */
+.story-content {
+transform-style: preserve-3d;
+transition: transform 0.3s ease-in-out;
+}
+
+.story:hover .story-content {
+transform: rotateY(15deg);  /* Tilt effect on hover */
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+#blog h2 {
+    font-size: 2rem;
+}
+
+.story {
+    padding: 15px;
+}
+
+.story img {
+    height: 200px;
+    object-fit: cover;
+}
+}
+
+
+//* Why Travel With Us Section */
+#cta {
+padding: 50px 20px;
+text-align: center;
+background: #fff;
+}
+
+#cta .benefits {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.benefit {
+flex: 1 1 300px;
+padding: 20px;
+background: #007bff; /* Blue background for benefits */
+color: #fff;
+text-align: center;
+border-radius: 10px;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit i {
+font-size: 2rem;
+margin-bottom: 10px;
+}
+#cta h2 {
+
+font-size: 2.5rem; /* Increase the font size */
+font-weight: bold; /* Make it bold */
+text-align: center; /* Center align the text */
+margin-bottom: 20px; /* Add some spacing below the heading */
+color: #333; /* Optional: Set a color for better visibility */
+}
+
+
+.benefit h3 {
+margin: 10px 0;
+font-size: 1.5rem;
+}
+
+.benefit p {
+font-size: 1rem;
+line-height: 1.5;
+}
+
+.benefit:hover {
+transform: scale(1.1);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Booking Section */
+#booking {
+padding: 50px 20px;
+background: #f4f8fb; /* Light background for section */
+text-align: center;
+}
+
+#booking h2 {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 30px;
+color: #333;
+}
+
+#booking form {
+display: grid;
+grid-template-columns: 1fr;
+gap: 20px;
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+background: linear-gradient(135deg, #e0f7fa, #ffffff); /* Subtle gradient */
+border: 1px solid #ddd;
+border-radius: 10px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#booking label {
+text-align: left;
+font-size: 1rem;
+font-weight: bold;
+color: #555;
+}
+
+#booking input,
+#booking select,
+#booking button {
+padding: 12px 15px;
+font-size: 1rem;
+border-radius: 5px;
+border: 1px solid #ccc;
+width: 100%;
+}
+
+#booking input:focus,
+#booking select:focus {
+border-color: #007bff;
+outline: none;
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#booking button {
+background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for the button */
+color: #fff;
+font-weight: bold;
+border: none;
+cursor: pointer;
+transition: background 0.3s, transform 0.2s;
+}
+
+#booking button:hover {
+background: linear-gradient(135deg, #0056b3, #003e7e); /* Darker on hover */
+transform: scale(1.05);
+}
+
+#booking button:active {
+transform: scale(1);
+}
+
+#booking select option[disabled] {
+color: #999;
+}
+
+
+/* Contact Section */
+#contact {
+padding: 50px 20px;
+text-align: center;
+background: #333;
+color: #fff;
+}
+
+#contact h2 {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 30px;
+}
+
+#contact .social-icons {
+margin: 20px 0;
+}
+
+#contact .social-icons a {
+margin: 0 15px;
+color: #fff;
+font-size: 2rem;
+transition: color 0.3s, transform 0.2s;
+}
+
+#contact .social-icons a:hover {
+color: #007bff; /* Highlighted blue color on hover */
+transform: scale(1.1); /* Slight zoom effect */
+}
+
+#contact p {
+font-size: 1.2rem;
+margin-top: 20px;
+}
+
+#contact a {
+color: #007bff;
+text-decoration: none;
+}
+
+#contact a:hover {
+text-decoration: underline;
+}
+
+
+/* General Scroll Behavior */
+html {
+scroll-behavior: smooth; /* Smooth scroll for all anchor links */
+}
+
+/* Navbar Active Link Styling */
+.navbar nav ul li a.active {
+background-color: yellow; /* Highlight active link */
+border-radius: 10px;
+}
+
+/* Light Mode Styles */
+body[data-theme='light'] {
+background-color: #f9f9f9;
+color: #333;
+}
+
+/* Dark Mode Styles */
+body[data-theme='dark'] {
+background-color: #333;
+color: #f9f9f9;
+}
+
+body[data-theme='dark'] .navbar {
+background-color: #222;
+}
+
+body[data-theme='dark'] .navbar nav ul li a {
+color: #fff;
+}
+
+body[data-theme='dark'] .video-overlay {
+color: #f9f9f9;
+}
+
+body[data-theme='dark'] .cta-button {
+background-color: #f35353;
+}
+
+body[data-theme='dark'] #destinations {
+background-color: #222;
+}
+
+body[data-theme='dark'] .destination .overlay {
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Light/Dark Mode Transition */
+html {
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme='dark'] .video-carousel .video {
+filter: brightness(0.6);
+}
+
+body[data-theme='dark'] .destination img {
+filter: brightness(0.7);
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+background: none;
+border: none;
+color: #fff;
+font-size: 1.5rem;
+cursor: pointer;
+padding: 10px;
+}
+/* Basic page styling */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+nav {
+background-color: gold;
+color: white;
+padding: 10px;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+nav ul li {
+display: inline;
+margin-right: 15px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 18px;
+}
+
+section {
+padding: 50px 20px;
+margin-top: 20px;
+}
+
+section:nth-child(odd) {
+background-color: #f4f4f4;
+}
+
+section:nth-child(even) {
+background-color: #ddd;
+}
+.theme-toggle {
+background: none;
+border: none;
+color: #ed3eca;
+font-size: 1.5rem;
+cursor: pointer;
+position: relative;
+}
+theme-toggle .fa-sun {
+color: #ffeb3b; /* A brighter yellow */
+text-shadow: 0 0 10px rgba(255, 235, 59, 0.7); /* Glow effect */
+transition: all 0.3s ease;
+}
+
+.theme-toggle:hover .fa-sun {
+color: #ff9800; /* Slightly darker yellow on hover */
+text-shadow: 0 0 15px rgba(255, 152, 0, 0.9);
+}
+/* General Body */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background: linear-gradient(135deg, #ff7e5f, #feb47b);
+background-size: 400% 400%;
+animation: gradientBG 10s ease infinite;
+overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+background: gold;
+color: red;
+position: sticky;
+top: 0;
+z-index: 1000;
+flex-wrap: wrap; /* Allow navbar items to stack on small screens */
+}
+
+.navbar .logo {
+font-size: 1.6rem;
+font-weight: bold;
+}
+
+.navbar nav ul {
+list-style: none;
+display: flex;
+gap: 15px;
+flex-wrap: wrap; /* Allow items to wrap on small screens */
+justify-content: center;
+}
+
+.navbar nav ul li a {
+text-decoration: none;
+color: red;
+font-weight: bold;
+font-size: 1.5rem;
+padding: 5px 10px;
+transition: all 0.3s;
+}
+
+.navbar nav ul li a:hover {
+background: yellow;
+border-radius: 10px;
+}
+
+.theme-toggle {
+background: none;
+border: none;
+color: #fff;
+font-size: 1.5rem;
+cursor: pointer;
+}
+
+/* Responsive Logo */
+.navbar .logo img {
+height: 50px; /* Reduce size on smaller screens */
+width: auto;
+margin-right: 20px;
+}
+
+/* Video Popup Section */
+.video-carousel {
+position: relative;
+height: 100vh;
+overflow: hidden;
+}
+
+.video-carousel .video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.video-gradient {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.4);
+}
+
+.video-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: #fa8787;
+z-index: 10;
+}
+
+.video-overlay h1 {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.video-overlay p {
+font-size: 1.2rem;
+margin-bottom: 30px;
+}
+
+.cta-button {
+padding: 12px 24px;
+background-color: #f35353;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+background-color: #d43f3f;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+/* For screens smaller than 768px */
+.navbar {
+    flex-direction: column; /* Stack navbar items */
+    align-items: flex-start;
+}
+
+.navbar nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar nav ul li a {
+    font-size: 1.2rem;
+    padding: 8px;
+}
+
+.theme-toggle {
+    font-size: 1.3rem;
+}
+
+/* Video Overlay Adjustments */
+.video-overlay h1 {
+    font-size: 2rem;
+}
+
+.video-overlay p {
+    font-size: 1rem;
+}
+
+.cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+/* Responsive Destination Cards */
+.destination {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.destination img {
+    height: auto;
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 480px) {
+/* For smaller screens (phones) */
+.navbar {
+    padding: 10px 15px;
+}
+
+.navbar .logo {
+    font-size: 1.4rem;
+}
+
+.navbar nav ul li a {
+    font-size: 1.1rem;
+    padding: 6px 10px;
+}
+
+.video-overlay h1 {
+    font-size: 1.8rem;
+}
+
+.video-overlay p {
+    font-size: 0.9rem;
+}
+
+.cta-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
+/* Destination Cards */
+.destination {
+    width: 100%;
+    margin: 0 0 15px;
+}
+
+/* Adjust Parallax Scrolling */
+.parallax {
+    height: 80vh; /* Reduce height on smaller screens */
+}
+}
+
+/* Smooth Gradient Background Animation */
+@keyframes gradientBG {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+/* Floating Effect for Text and Images */
+.explore-section img, .explore-section h2 {
+animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+0% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0); }
+}
+
+/* Parallax Scrolling */
+.parallax {
+position: relative;
+background: url('./parallax-background.jpg') no-repeat center center fixed;
+background-size: cover;
+height: 100vh;
+overflow: hidden;
+z-index: -1;
+}

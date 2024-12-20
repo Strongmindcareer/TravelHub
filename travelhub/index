@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>travelhub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="light-mode">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">TravelNow</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle">
+      <i class="fas fa-sun"></i>
+    </button>
+  </header>
+
+  <!-- Homepage Variants -->
+  <section id="home">
+    <div class="home-page" id="home1">
+      <h1>Discover Your Next Adventure</h1>
+      <p>Explore the world with our curated travel packages.</p>
+      <button class="btn">Get Started</button>
+    </div>
+    <div class="home-page" id="home2" hidden>
+      <h1>Special Offers</h1>
+      <p>Book now and save big on your next trip.</p>
+      <button class="btn">View Offers</button>
+    </div>
+    <div class="home-page" id="home3" hidden>
+      <h1>Travel Stories</h1>
+      <p>Read inspiring stories from fellow travelers.</p>
+      <button class="btn">Read More</button>
+    </div>
+  </section>
+</body>
+</html>
