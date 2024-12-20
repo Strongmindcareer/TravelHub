@@ -15,7 +15,7 @@ Travel Hub is a dynamic, user-friendly web app designed to help you explore new 
 * 🌞 User-Friendly UI: Clean, intuitive design to make navigation and trip planning a breeze.
 * 🌟 Fully Responsive: Optimized for desktop, tablet, and mobile views, ensuring a smooth experience across all devices.
 * 🌍 No Backend: Purely frontend project, no server-side code, making it lightweight and fast!
-Whether you're planning your next vacation or simply exploring new destinations, Travel Hub provides everything you need for a seamless travel experience! 🌏💫
+-- Whether you're planning your next vacation or simply exploring new destinations, Travel Hub provides everything you need for a seamless travel experience! 🌏💫
 # Screenshots
 ![Screenshot 2024-12-20 190036](https://github.com/user-attachments/assets/cb8d9de8-b562-4d0f-8617-f4d4764e58af)
 #
